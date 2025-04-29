@@ -1,0 +1,113 @@
+body {
+    background-color: #f6ecce; /* Süt rengi arka plan */
+    margin: 0;                  /* Sayfanın kenar boşluklarını sıfırlayalım */
+    padding: 0;                 /* Sayfanın iç boşluklarını sıfırlayalım */
+    text-align: center;         /* Sayfa genelinde içeriği ortalayalım */
+   
+}
+
+.foto1{
+  margin-bottom: 320px;
+  display: block;             
+  margin-left: auto;         /* Sol tarafını otomatik kaydır */
+  margin-right: auto;        /* Sağ tarafını otomatik kaydır */
+  width: 80px;   /* Genişlik 80px */
+  height: 80px;  /* Yükseklik 80px */
+}
+
+
+.custom-title {
+    background-color: rgb(136, 225, 136);   /* Yazının arka planı yeşil */
+    color: rgb(4, 4, 4);                     /* Yazı rengi siyah */
+    font-weight: bold;                       /* Yazıyı kalın yap */
+    text-transform: uppercase;               /* Yazıyı büyük harf yap */
+    padding: 10px 30px;                      /* Yazının etrafında boşluk */
+    display: inline-block;                   /* Yazıyı saracak kutuyu sınırlı yapar */
+    margin-top: 20px;                        /* Başlık ile üst arasına boşluk ekleyelim */
+}
+
+.resim-orta {
+    display: block;
+    margin: 5px auto; /* Resmi yatayda ortalar ve üstüne boşluk ekler */
+    width: 1000px; /* Resmi 1200px genişliğinde yapar */
+    height: 400px;
+}
+
+.description-text {
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-size: 18px;        /* Yazı boyutunu büyütüyoruz */
+    color: rgb(4, 3, 3);    /* Yazı rengi Siyah */
+    line-height: 1.5;       /* Satır aralığını açarak okunabilirliği arttırır */
+    margin-top: 20px;       /* Yazı ile başlık arasına boşluk ekler */
+    width: 80%;             /* Yazıyı sayfa genişliğine göre sınırla */
+    margin-left: 260px;         /* Solda ortalama */
+    margin-right: auto;     /* Sağda ortalama */     
+    text-align: justify; 
+    width: 600px;
+}
+
+.additional-text{
+     text-align: left;        /* Sol hizalama */
+    font-size: 30px;         /* Yazı boyutu */
+    color: rgb(4, 3, 3);     /* Yazı rengi */
+    line-height: 1.5;        /* Satır yüksekliği */
+    margin-bottom: 20px;     /* Alt boşluk */
+    margin-left: 260px;
+    margin-right: auto; 
+}
+
+ .button {                                                                           
+    background-color: rgb(129, 225, 129);  /* Buton rengi */
+    color: rgb(0, 0, 0);              /* Yazı rengi */
+    padding: 15px 32px;        /* İç boşluk */
+    font-size: 30px;   
+    font-weight: bold;
+    font-family: 'Times New Roman', Times, serif;       /* Yazı boyutu */
+    border-color: rgb(0, 0, 0);              /* Kenarlık yok */
+    cursor: pointer;           /* Fare üzerine gelince el simgesi */
+    border-radius: 25px;        /* Kenarları yuvarlat */
+    margin-left: 700px;
+    margin-top: -10px;
+    position: relative;
+    bottom: 120px;
+    
+} 
+
+/* Navbar Stil */ 
+    .navbar {
+    display: flex; /* Flexbox düzeni kullanarak öğeleri hizalar */
+    justify-content: space-between; /* Sol ve sağ arasındaki boşluğu eşitler */
+    align-items: center; /* Yatayda ortalar */
+    background-color: rgb(196, 189, 127); /* Navbar arka planı  */
+    padding: 10px 20px; /* Navbar içindeki boşluk */
+  }
+  
+   .navbar-left, .navbar-right {
+    list-style-type: none; /* Liste işaretlerini kaldırır */
+    margin: 0;
+    padding: 0;
+    display: flex; /* Menü öğelerini yatayda sıralar */
+  }
+  
+  .navbar-left li, .navbar-right li {
+    padding: 0 20px; /* Menü öğeleri arasına yatay boşluk ekler */
+  }
+  
+   .navbar a {
+    color: rgb(7, 7, 7); /* Bağlantı metin rengi */
+    text-decoration: none; /* Bağlantı alt çizgisini kaldırır */
+    font-size: 18px; /* Yazı boyutunu ayarlar */
+    display: block;
+    font-weight: bold;
+    text-align: center; /* Bağlantıyı ortalar */
+  }
+  
+   .navbar a:hover {
+    background-color: #ddd; /* Hover (fare üzerine geldiğinde) arka plan rengi */
+    color: black; /* Hover metin rengi */
+  }
+  
+
+
+
+
