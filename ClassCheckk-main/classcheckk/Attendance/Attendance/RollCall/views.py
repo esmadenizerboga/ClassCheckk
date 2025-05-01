@@ -21,17 +21,17 @@ def userlogin(request):
             messages.error(request, 'Username or Password are incorrect')
 
     return render(request, 'userlogin.html', {'username': username})
-         # Giriş sayfası şablonunu render et
+         # Giriş sayfası render et
 
 
 def empty(request):
-    return render(request, 'empty.html')  # Empty şablonunu render et
+    return render(request, 'empty.html')  # Empty sayfasını render et
 
 def home(request):
-    return render(request, 'home.html')  # Empty şablonunu render et
+    return render(request, 'home.html')  # Home sayfasını render et
 
 def userlogout(request):
     logout(request)  # Kullanıcıyı çıkış yaptır
-    return redirect('index') 
+    return redirect('index') # Kullanıcıyı index sayfasına döndürür
 
 

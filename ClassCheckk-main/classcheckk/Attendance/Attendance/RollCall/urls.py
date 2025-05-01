@@ -6,5 +6,5 @@ urlpatterns = [
     path('index/', views.index, name='index'),  # ClassCheck sayfası
     path('userlogin/', views.userlogin, name='userlogin'),  # Login sayfası
     path('empty/', views.empty, name='empty'),  # Empty Sayfasi
-    path('userlogout/', views.userlogout, name='userlogout'),   
+    path('userlogout/', views.userlogout, name='userlogout'),   # logout sayfası
 ]

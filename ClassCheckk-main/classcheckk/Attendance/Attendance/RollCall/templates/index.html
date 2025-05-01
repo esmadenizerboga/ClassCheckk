@@ -7,7 +7,8 @@
   <link rel="stylesheet" href="{% static 'css/style.css' %}"> <!-- CSS dosyası buradan bağlanır -->
 </head>
 
-<body class="index">
+<body>
+  <div class="index">
 
   <!-- Navbar -->
   <nav class="navbar">
@@ -37,7 +38,7 @@
   <form action="{% url 'userlogin' %}">
     <button type="submit" class="button">ADMIN</button>
   </form>
-
+  </div>
 </body>
 
 </html>
