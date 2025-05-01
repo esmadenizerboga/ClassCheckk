@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+  {% load static %}
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="{% static 'css/login.css' %}" /> <!-- CSS dosyasını bağlama -->
+  <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+  <title>LOGIN</title>
+</head>
+
+<body>
+
+  <!-- Logo -->
+  <div class="logo-container">
+    <img src="{% static 'logo.png' %}" alt="ClassCheck Logo" class="logo" /> <!-- Logo görselini bağlama -->
+  </div>
+
+  <!-- Navbar -->
+  <nav class="navbar">
+    <ul class="navbar-left">
+      <li><a href="{% url 'index' %}">CLASSCHECK</a></li>
+      <li><a href="{% url 'empty' %}">ADMIN HOME PAGE</a></li>
+      <li><a href="{% url 'home' %}">HOME</a></li> <!-- URL'yi güncelle -->
+    </ul>
+    <ul class="navbar-right">
+      <li><a href="{% url 'userlogin' %}">LOG IN</a></li>
+    </ul>
+  </nav>
+
+  <!-- Login Form Wrapper -->
+  <div class="wrapper">
+    <form action="{% url 'userlogin' %}" method="POST"> <!-- Formun action'ını güncelle -->
+      {% csrf_token %} <!-- CSRF koruması için token -->
+      <h1>Welcome To ClassCheck!</h1>
+
+      <div class="input-box">
+        <i class='bx bxs-user'></i>
+        <input type="text" name="username" placeholder="Username" required /> <!-- name ekledik -->
+      </div>
+
+      <div class="input-box">
+        <i class='bx bxs-lock-alt'></i>
+        <input type="password" name="password" placeholder="Password" required /> <!-- name ekledik -->
+      </div>
+
+      <div class="remember-forgot">
+        <label><input type="checkbox" />Remember Me</label>
+        <a href="#">Forgot Password</a>
+      </div>
+      
+      <button type="submit" class="btn">Login</button>
+    </form>
+  </div>
+
+</body>
+
+</html>
