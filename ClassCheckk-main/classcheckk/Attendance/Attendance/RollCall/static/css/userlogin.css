@@ -1,3 +1,5 @@
+/*  BURASI USERLOGİN CSS İ */
+
 * {
   margin: 0;
   padding: 0;
@@ -13,39 +15,41 @@ body {
 }
 
 .navbar {
-  margin-left: 80px; 
-  font-family:Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+  margin-left: 80px;
+  font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
   font-size: medium;
   display: flex;
   justify-content: space-between;
-  align-items: center; /* Logo ve navbarı dikey olarak ortalar */
+  align-items: center;
   background-color: rgb(196, 189, 127);
   padding: 10px 20px;
-  height: 80px; /* Navbar yüksekliği */
-  
+  height: 80px;
+
 }
 
-.navbar-left, .navbar-right {
-  list-style-type: none; 
+.navbar-left,
+.navbar-right {
+  list-style-type: none;
   margin: 0;
   padding: 0;
-  display: flex; 
- 
+  display: flex;
+
 }
 
-.navbar-left li, .navbar-right li {
-  padding: 0 20px; 
+.navbar-left li,
+.navbar-right li {
+  padding: 0 20px;
 }
 
 .navbar a {
-  color: rgb(14, 13, 13); 
-  text-decoration: none; 
-  font-size: 18px; 
+  color: rgb(14, 13, 13);
+  text-decoration: none;
+  font-size: 18px;
   display: block;
   margin-top: 10px;
   font-weight: bold;
-  text-align: center; 
-  transition: background-color 0.5s, color 0.5s; /* Geçiş efekti */
+  text-align: center;
+  transition: background-color 0.5s, color 0.5s;
   font-family: 'Times New Roman', Times, serif;
 }
 
@@ -58,18 +62,18 @@ body {
   position: absolute;
   margin-left: 0%;
   z-index: 1000;
-  height: 80px; /* Logo yüksekliği */
+  height: 80px;
 }
 
 .logo {
-  height: 100%; /* Logo yüksekliği navbar ile eşit olacak şekilde ayarlandı */
-  width: auto; /* Genişlik otomatik ayarlandı */
+  height: 100%;
+  width: auto;
 }
 
 .wrapper {
   display: flex;
   width: 400px;
-  
+
   background: rgb(71, 194, 137);
   color: black;
   margin: 100px auto;
@@ -152,4 +156,24 @@ body {
   font-weight: 600;
 }
 
+.messages {
+  min-height: 30px;     
+  margin-bottom: 10px;
+  margin-top: 20px;
+  display: flex;
+  margin-left: 620px;
+}
 
+.alert {
+  padding: 10px 15px;
+  border-radius: 0px;
+  color: rgb(0, 0, 1);
+  background-color: rgb(228, 65, 65);
+  transition: all 0.3s ease-in-out;
+}
+
+.form-container {
+  padding-top: 20px; 
+  max-width: 400px;
+  margin: auto;
+}

@@ -4,11 +4,10 @@ from django.contrib import messages
 from django.contrib.auth import logout
 
 def index(request):
-    return render(request, 'index.html')  # Ana sayfa şablonunu render et
+    return render(request, 'index.html')  
 
 def userlogin(request):
-    username = ''  # username değişkenini baştan tanımlıyoruz
-
+    username = '' 
     if request.method == 'POST':
         username = request.POST['username']
         password = request.POST['password']
@@ -18,20 +17,17 @@ def userlogin(request):
             login(request, user)
             return redirect('empty')
         else:
-            messages.error(request, 'Username or Password are incorrect')
+            messages.error(request, ' Incorrect Entry, Please Try Again..')
 
     return render(request, 'userlogin.html', {'username': username})
-         # Giriş sayfası render et
-
 
 def empty(request):
-    return render(request, 'empty.html')  # Empty sayfasını render et
+    return render(request, 'empty.html') 
 
 def home(request):
-    return render(request, 'home.html')  # Home sayfasını render et
-
+    return render(request, 'home.html')  
 def userlogout(request):
-    logout(request)  # Kullanıcıyı çıkış yaptır
-    return redirect('index') # Kullanıcıyı index sayfasına döndürür
+    logout(request)  
+    return redirect('index') 
 
 

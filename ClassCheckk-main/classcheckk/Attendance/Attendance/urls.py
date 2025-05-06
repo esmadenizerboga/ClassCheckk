@@ -16,10 +16,10 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path, include
 
-
+# Attendancenin Urls.py si..
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('', include('Attendance.RollCall.urls')),  # Uygulamanızın URL'lerini ekleyin
+    path('', include('Attendance.RollCall.urls')), 
     
 ]

@@ -1,34 +1,37 @@
-/* Navbar Stil */ 
+/*Empty CSS'İ BURADA TANIMLADIK */
+
 .navbar {
-    display: flex; /* Flexbox düzeni kullanarak öğeleri hizalar */
-    justify-content: space-between; /* Sol ve sağ arasındaki boşluğu eşitler */
-    align-items: center; /* Yatayda ortalar */
-    background-color: rgb(196, 189, 127); /* Navbar arka planı  */
-    padding: 10px 20px; /* Navbar içindeki boşluk */
-  }
-  
-   .navbar-left, .navbar-right {
-    list-style-type: none; /* Liste işaretlerini kaldırır */
-    margin: 0;
-    padding: 0;
-    display: flex; /* Menü öğelerini yatayda sıralar */
-  }
-  
-  .navbar-left li, .navbar-right li {
-    padding: 0 20px; /* Menü öğeleri arasına yatay boşluk ekler */
-  }
-  
-   .navbar a {
-    color: rgb(7, 7, 7); /* Bağlantı metin rengi */
-    text-decoration: none; /* Bağlantı alt çizgisini kaldırır */
-    font-size: 18px; /* Yazı boyutunu ayarlar */
-    display: block;
-    font-weight: bold;
-    text-align: center; /* Bağlantıyı ortalar */
-  }
-  
-   .navbar a:hover {
-    background-color: #ddd; /* Hover (fare üzerine geldiğinde) arka plan rengi */
-    color: black; /* Hover metin rengi */
-  }
-  
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: rgb(196, 189, 127);
+  padding: 10px 20px;
+}
+
+.navbar-left,
+.navbar-right {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+}
+
+.navbar-left li,
+.navbar-right li {
+  padding: 0 20px;
+}
+
+.navbar a {
+  color: rgb(7, 7, 7);
+  text-decoration: none;
+  font-size: 18px;
+  display: block;
+  font-weight: bold;
+  text-align: center;
+}
+
+.navbar a:hover {
+  background-color: #ddd;
+  color: black;
+}
+

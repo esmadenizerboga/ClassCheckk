@@ -1,6 +1,6 @@
 from django.urls import path
 from . import views
-
+# RollCall'ın urls.py si budur..
 urlpatterns = [
     path('', views.home, name='home'),  # Home Sayfasına Geçecek
     path('index/', views.index, name='index'),  # ClassCheck sayfası
