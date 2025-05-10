@@ -5,7 +5,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="{% static 'css/empty.css' %}">
+  <link rel="stylesheet" href="{% static 'css/emptyd.css' %}" />
   <title>EMPTY PAGE</title>
 </head>
 
@@ -17,34 +17,42 @@
       <li><a href="{% url 'index' %}">CLASSCHECK</a></li>
       <li><a href="{% url 'empty' %}">ADMIN HOME PAGE</a></li>
       <li><a href="{% url 'home' %}">HOME</a></li>
-
     </ul>
     <ul class="navbar-right">
       <li><a href="{% url 'userlogout' %}">LOG OUT</a></li>
     </ul>
   </nav>
 
-     
-  <!--BAŞLIK-->
-    <h1 class="welcome-title">WELCOME TO YOUR PAGE</h1>
-   <h2 class="alt-title"> COURSES- 2025/2026 SPRİNG TERM</h2>
-    <form action="{% url 'home' %}">
-      <button type="submit" class="button">ADD COURSE </button>
-    </form>
-    <hr>
-    <form action="{% url 'home' %}">
-      <button type="submit" class="button">DELETE COURSE </button>
-    </form>
-    <hr>
-    <form action="{% url 'home' %}">
-      <button type="submit" class="button"> PROJECT </button>
-    </form>
+  <!-- Başlık -->
+  <h1 class="welcome-title">WELCOME TO YOUR PAGE</h1>
+  <h2 class="alt-title">COURSES - 2025/2026 SPRING TERM</h2>
 
-    
-
+  <!-- Butonlar -->
+  <form action="{% url 'addcourse' %}">
+    <button type="submit" class="button">ADD COURSE</button>
+  </form>
+  <hr>
+  <form action="{% url 'deletecourse' %}">
+    <button type="submit" class="two">DELETE COURSE</button>
+</form>
+  </form>
+ <hr>
+  <!-- Kurs Listesi -->
+  <h1>COURSES</h1>
+  <ul class="course-list">
+    {% for course in courses %}
+      <li class="course-item">{{ course.name }}</li>
+    {% empty %}
+      <li class="no-course-item">No courses found.</li>
+    {% endfor %}
+  </ul>
   
-   
+  
+
+
+
+
+
 
 </body>
-
 </html>
