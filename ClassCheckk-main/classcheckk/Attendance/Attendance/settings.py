@@ -135,3 +135,20 @@ DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 AUTHENTICATION_BACKENDS = [
     'django.contrib.auth.backends.ModelBackend',
 ]
+
+
+EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
+EMAIL_HOST = 'smtp.gmail.com'
+EMAIL_PORT = 587  # veya 465 (SSL için)
+EMAIL_USE_TLS = True  # TLS kullanıyorsanız True yapın
+EMAIL_HOST_USER = 'b2muhendis6m@gmail.com'  # Gmail adresiniz
+EMAIL_HOST_PASSWORD = '1234'  # Uygulama şifresi
+
+
+
+
+
+
+
+
+
