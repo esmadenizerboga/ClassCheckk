@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+{% load static %}
+
+<head>
+  <meta charset="UTF-8">
+  <title>Delete Course</title>
+  <link rel="stylesheet" href="{% static 'css/emptyd.css' %}">
+</head>
+
+<body>
+   <!-- Kurs Silme Formu -->
+<h2>Bir kursu silmek için seçin:</h2>
+<form method="post" action="{% url 'deletecourse' %}">
+  {% csrf_token %}
+  <select name="course_id" required>
+    {% for course in courses %}
+      <option value="{{ course.id }}">{{ course.name }}</option>
+    {% endfor %}
+  </select>
+  <button type="submit">KURSU SİL</button>
+</body>
+</html>
