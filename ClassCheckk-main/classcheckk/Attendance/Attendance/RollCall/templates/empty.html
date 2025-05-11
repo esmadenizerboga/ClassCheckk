@@ -5,7 +5,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="{% static 'css/emptyd.css' %}" />
+  <link rel="stylesheet" href="{% static 'css/det.css' %}" />
   <title>EMPTY PAGE</title>
 </head>
 
@@ -37,17 +37,28 @@
 </form>
   </form>
  <hr>
+
   <!-- Kurs Listesi -->
   <h1>COURSES</h1>
   <ul class="course-list">
-    {% for course in courses %}
-      <li class="course-item">{{ course.name }}</li>
-    {% empty %}
-      <li class="no-course-item">No courses found.</li>
-    {% endfor %}
-  </ul>
+  {% for course in courses %}
+    {% if course.id %}
+      <li class="course-item">
+        <a href="{% url 'coursedetail' course.id %}">
+          <button class="course-button">{{ course.name }}</button>
+        </a>
+      </li>
+    {% else %}
+      <li class="course-item">[ID eksik] {{ course.name }}</li>
+    {% endif %}
+  {% empty %}
+    <li class="no-course-item">No courses found.</li>
+  {% endfor %}
+</ul>
+
+
   
-  
+
 
 
 

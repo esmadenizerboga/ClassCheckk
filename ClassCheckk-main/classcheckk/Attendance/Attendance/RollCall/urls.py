@@ -15,5 +15,9 @@ urlpatterns = [
     path('reset_done/', auth_views.PasswordResetCompleteView.as_view(), name='password_reset_complete'),
     path('addcourse/', views.addcourse, name='addcourse'),
     path('deletecourse/', views.deletecourse, name='deletecourse'),
+    path('course/<int:course_id>/', views.coursedetail, name='coursedetail'),
+    path('student/', views.student, name='student'),
+    path('qr/', views.qr, name='qr'),
+
 
 ]

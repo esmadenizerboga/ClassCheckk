@@ -81,3 +81,14 @@ def deletecourse(request):
     return render(request, 'deletecourse.html', {'courses': courses})
 
 
+@login_required(login_url='userlogin')
+def coursedetail(request, course_id):
+    return render(request, 'coursedetail.html')
+
+
+def student(request,):
+    return render(request, 'student.html')
+
+
+def qr(request,):
+    return render(request, 'qr.html')
