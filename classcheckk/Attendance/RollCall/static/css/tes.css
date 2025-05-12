@@ -7,7 +7,6 @@ body {
     /* Sayfanın iç boşluklarını sıfırlayalım */
     text-align: center;
     /* Sayfa genelinde içeriği ortalayalım */
-
 }
 
 .navbar {
@@ -45,38 +44,94 @@ body {
     color: black;
 }
 
-.centered-title {
+.centered-title,
+.alt-title {
     text-align: center;
-    margin-top: 60px;
     color: rgb(19, 57, 123);
 }
 
-.alt-title {
-    text-align: center;
-    margin-top: auto;
-    color: rgb(19, 57, 123);
+.centered-title {
+    margin-top: 60px;
+}
+
+.yan-yana,
+.yana-yana {
+    margin: 0 100px;
+    display: flex;
+    font-size: 18px;
+    padding: 20px;
 }
 
 .yan-yana {
-    margin-left: 100px;
-    margin-right: 100px;
-    display: flex;
-    font-size: 18px;
     gap: 465px;
-    padding: 20px;
-
 }
 
 .yana-yana {
-    margin-left: 100px;
-    margin-right: 100px;
-    display: flex;
-    font-size: 18px;
     gap: 500px;
-    padding: 20px;
-
 }
 
 .cumle {
     color: antiquewhite;
+}
+
+.button-container {
+    display: flex;
+    justify-content: flex-start;
+    gap: 10px;
+}
+
+.button {
+    background-color: #007BFF;
+    margin-left: 90px;
+    color: white;
+    border: none;
+    padding: 20px 20px;
+    text-align: center;
+    text-decoration: none;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+.button:hover {
+    background-color: #0056b3;
+}
+
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+    font-family: Arial, sans-serif;
+}
+
+th,
+td {
+    padding: 12px 15px;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+}
+
+thead {
+    background-color: #f4f4f4;
+}
+
+tr:hover {
+    background-color: #f1f1f1;
+}
+
+.update-button {
+    background-color: #4CAF50;
+    border: none;
+    color: white;
+    padding: 8px 12px;
+    text-align: center;
+    font-size: 30px;
+    border-radius: 20px;
+    cursor: pointer;
+    margin-top: 10px;
+    transition: background-color 0.3s ease;
+}
+
+.update-button:hover {
+    background-color: #45a049;
 }

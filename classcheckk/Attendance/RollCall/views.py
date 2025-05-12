@@ -4,6 +4,8 @@ from django.contrib import messages
 from django.contrib.auth import logout
 from django.contrib.auth.decorators import login_required
 from .models import Course
+from django.urls import reverse
+
 
 
 def index(request):
@@ -83,7 +85,11 @@ def deletecourse(request):
 
 @login_required(login_url='userlogin')
 def coursedetail(request, course_id):
-    return render(request, 'coursedetail.html')
+    # Kursu al
+    course = get_object_or_404(Course, id=course_id)
+    update_url = reverse('update', args=[course.id])  # course.id'yi kullanın
+
+    return render(request, 'coursedetail.html', {'course': course, 'update_url': update_url})
 
 
 def student(request,):
@@ -92,3 +98,19 @@ def student(request,):
 
 def qr(request,):
     return render(request, 'qr.html')
+
+def update(request, course_id):
+    # Güncellenmek istenen dersi al
+    course = get_object_or_404(Course, id=course_id)
+
+    # Form gönderildiyse (POST isteği)
+    if request.method == 'POST':
+        form = CourseForm(request.POST, instance=course)
+        if form.is_valid():
+            form.save()  # Ders bilgisini kaydet
+            return redirect('some_success_url')  # Başarılı işlem sonrası yönlendir
+    else:
+        # Formu GET isteği ile getir
+        form = CourseForm(instance=course)
+    
+    return render(request, 'update.html', {'form': form, 'course': course})

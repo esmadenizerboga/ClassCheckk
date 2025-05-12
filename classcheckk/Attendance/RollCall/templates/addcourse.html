@@ -8,13 +8,13 @@
 </head>
 <body>
 
-  <h1>ADD COURSE FORM </h1>
+  <h1>ADD COURSE FORM</h1>
   <form method="post" action="">
     {% csrf_token %}
     <label for="course_name">COURSE NAME:</label><br>
     <input type="text" id="course_name" name="course_name" required><br><br>
 
-    <label for="course_capacity">COURSE CAPACİTY:</label><br>
+    <label for="course_capacity">COURSE CAPACITY:</label><br>
     <input type="text" id="course_capacity" name="course_capacity" required><br><br>
 
     <label for="course_code">COURSE CODE:</label><br>
@@ -23,16 +23,16 @@
     <label for="establishment_date">ESTABLISHMENT DATE:</label><br>
     <input type="text" id="establishment_date" name="establishment_date" required><br><br>
 
-    
     <label for="instructor">INSTRUCTOR:</label><br>
-    <input type="text" id="course_code" name="instructor" required><br><br>
+    <input type="text" id="instructor" name="instructor" required><br><br>
 
-   <!-- BACK button goes back to 'empty' page -->
+    <!-- BACK button goes back to 'empty' page -->
     <input type="button" value="BACK" onclick="window.location.href='{% url 'empty' %}'">
     
     <!-- CREATE button submits form -->
     <input type="submit" value="CREATE">
   </form>
 
+   
 </body>
 </html>
