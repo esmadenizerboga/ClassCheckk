@@ -80,12 +80,11 @@
     {% endfor %}
 </tbody>
 
-</table>
+</table> 
 
-<form action="{% url 'update' course.id %}" method="POST" style="display:inline;">
-  {% csrf_token %}
-  <button type="submit" class="update-button">Update</button>
-</form>
+
+
+       
 
 </body>
 </html>

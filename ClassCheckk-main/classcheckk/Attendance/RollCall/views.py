@@ -65,18 +65,21 @@ def addcourse(request):
             date = datetime.strptime(date_str, '%d.%m.%Y').date()
         except ValueError:
             messages.error(request, 'Tarih formatı yanlış! Lütfen GG.AA.YYYY şeklinde girin.')
-            return render(request, 'addcourse.html')
+            courses = Course.objects.all()
+            return render(request, 'addcourse.html', {'courses': courses})
 
         Course.objects.create(
-        course_name=name,
-        course_capacity=capacity,
-        course_code=code,
-        establishment_date=date,
-        instructor=instructor
+            course_name=name,
+            course_capacity=capacity,
+            course_code=code,
+            establishment_date=date,
+            instructor=instructor
         )
+        return redirect('addcourse')  # Sayfayı yenile, yeni kurs eklensin
 
-        return redirect('empty')
-    return render(request, 'addcourse.html')
+    # Her GET ve POST işleminden sonra mevcut kursları göster
+    courses = Course.objects.all()
+    return render(request, 'addcourse.html', {'courses': courses})
 
 
 def deletecourse(request):
@@ -95,7 +98,7 @@ def deletecourse(request):
 def coursedetail(request, course_id):
     # Kursu al
     course = get_object_or_404(Course, id=course_id)
-    update_url = reverse('update', args=[course.id])  # course.id'yi kullanın
+    update_url = reverse('update', args=[course.id]) 
 
     return render(request, 'coursedetail.html', {'course': course, 'update_url': update_url})
 
@@ -106,7 +109,6 @@ def student(request,):
 
 def qr(request,):
     return render(request, 'qr.html')
-
 
 
 def update(request, course_id):
@@ -135,6 +137,7 @@ def update(request, course_id):
         # Değişiklikleri kaydet
         course.save()
 
-        return redirect('update')  # Güncelleme sonrası yönlendirme
+        # Güncelleme sonrası yönlendirme
+        return redirect('update', course_id=course.id) 
 
     return render(request, 'update.html', {'course': course})
