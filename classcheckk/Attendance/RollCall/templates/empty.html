@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+{% load static %}
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="{% static 'css/det.css' %}" />
+  <title>EMPTY PAGE</title>
+  <style>
+  </style>
+</head>
+
+<body>
+
+  <!-- Navbar -->
+  <nav class="navbar">
+    <ul class="navbar-left">
+      <li><a href="{% url 'index' %}">CLASSCHECK</a></li>
+      <li><a href="{% url 'empty' %}">ADMIN HOME PAGE</a></li>
+      <li><a href="{% url 'home' %}">HOME</a></li>
+    </ul>
+    <ul class="navbar-right">
+      <li><a href="{% url 'userlogout' %}">LOG OUT</a></li>
+    </ul>
+  </nav>
+
+  <!-- Başlık -->
+  <h1 class="welcome-title">WELCOME TO YOUR PAGE</h1>
+  <h2 class="alt-title">COURSES - 2025/2026 SPRING TERM</h2>
+
+  <!-- Butonlar -->
+  <form action="{% url 'addcourse' %}">
+    <button type="submit" class="button">ADD COURSE</button>
+  </form>
+  <hr>
+  <form action="{% url 'deletecourse' %}">
+    <button type="submit" class="two">DELETE COURSE</button>
+  </form>
+  <hr>
+
+
+
+   <h2> COURSES</h2>
+
+  {% for course in courses %}
+    <form action="{% url 'coursedetail' course.id %}" method="get" style="margin-bottom: 10px;">
+      <button type="submit">{{ course.course_name }}</button>
+    </form>
+  {% empty %}
+    <p>No courses available yet.</p>
+  {% endfor %}
+  
+
+</body>
+</html>

@@ -1,0 +1,101 @@
+body {
+    background-color: #f6ecce;
+    /* Süt rengi arka plan */
+    margin: 0;
+    /* Sayfanın kenar boşluklarını sıfırlayalım */
+    padding: 0;
+    /* Sayfanın iç boşluklarını sıfırlayalım */
+    text-align: center;
+    /* Sayfa genelinde içeriği ortalayalım */
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: rgb(196, 189, 127);
+    padding: 10px 20px;
+}
+
+.navbar-left,
+.navbar-right {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+}
+
+.navbar-left li,
+.navbar-right li {
+    padding: 0 20px;
+}
+
+.navbar a {
+    color: rgb(7, 7, 7);
+    text-decoration: none;
+    font-size: 18px;
+    display: block;
+    font-weight: bold;
+    text-align: center;
+}
+
+.navbar a:hover {
+    background-color: #ddd;
+    color: black;
+}
+
+.centered-title,
+.alt-title {
+    text-align: center;
+    color: rgb(19, 57, 123);
+}
+
+.centered-title {
+    margin-top: 60px;
+}
+
+.yan-yana,
+.yana-yana {
+    margin: 0 100px;
+    display: flex;
+    font-size: 18px;
+    padding: 20px;
+}
+
+.yan-yana {
+    gap: 465px;
+}
+
+.yana-yana {
+    gap: 500px;
+}
+
+.cumle {
+    color: antiquewhite;
+}
+
+.button-container {
+    display: flex;
+    justify-content: flex-start;
+    gap: 10px;
+}
+
+.button {
+    background-color: #007BFF;
+    margin-left: 90px;
+    color: white;
+    border: none;
+    padding: 20px 20px;
+    text-align: center;
+    text-decoration: none;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+.button:hover {
+    background-color: #0056b3;
+}
+
+.btn{
+    background-color:burlywood;
+}
