@@ -9,6 +9,8 @@ from datetime import datetime
 from io import BytesIO
 from django.http import HttpResponse
 from django.shortcuts import render
+from .models import Student
+
 
 
 def giris(request):
@@ -108,9 +110,6 @@ def coursedetail(request, course_id):
     return render(request, 'coursedetail.html', {'course': course, 'update_url': update_url})
 
 
-def student(request,):
-    return render(request, 'student.html')
-
 
 def update(request, course_id):
     course = get_object_or_404(Course, id=course_id)
@@ -150,3 +149,23 @@ def hedef(request):
 
 def qr(request):
     return render(request, 'qr.html')
+
+def addstudent(request):
+    if request.method == 'POST':
+        name = request.POST.get('name')
+        student_no = request.POST.get('student_no')
+        email = request.POST.get('email')
+
+        if name and student_no and email:
+            student = Student(name=name, student_no=student_no, email=email)
+            student.save()
+            return redirect('home')  # ya da başarı sayfası
+
+        else:
+            return render(request, 'addstudent.html', {
+                'error': 'Tüm alanları doldurmalısınız.'
+            })
+
+    return render(request, 'addstudent.html')
+
+
