@@ -6,9 +6,14 @@ from django.contrib.auth.decorators import login_required
 from .models import Course
 from django.urls import reverse
 from datetime import datetime
+from io import BytesIO
+from django.http import HttpResponse
+from django.shortcuts import render
 
-def index(request):
-    return render(request, 'index.html')  
+
+def giris(request):
+    courses = Course.objects.all()
+    return render(request, 'giris.html', {'courses': courses})
 
 def userlogin(request):
     username = '' 
@@ -19,25 +24,54 @@ def userlogin(request):
 
         if user is not None:
             login(request, user)
-            return redirect('empty')
+            return redirect('home')
         else:
             messages.error(request, ' Incorrect Entry, Please Try Again..')
 
     return render(request, 'userlogin.html', {'username': username})
 
-@login_required(login_url='userlogin')
-def empty(request):
-  courses = Course.objects.all()
-  return render(request, 'empty.html', {'courses': courses}) 
 
 
 @login_required(login_url='userlogin')
 def home(request):
-    return render(request, 'home.html')  
+  courses = Course.objects.all()
+  return render(request, 'home.html', {'courses': courses}) 
+
+
+
+def addcourse(request, course_id=None):  # course_id opsiyonel parametre
+    if course_id:  # Eğer course_id varsa, mevcut kursu al
+        course = get_object_or_404(Course, id=course_id)
+    else:
+        course = None  # Yeni kurs eklemek için
+
+    if request.method == 'POST':
+        # Formdan gelen verileri al
+        course_name = request.POST.get('course_name')
+        course_capacity = request.POST.get('course_capacity')
+        course_code = request.POST.get('course_code')
+        establishment_date = request.POST.get('establishment_date')
+        instructor = request.POST.get('instructor')
+
+        # Yeni kurs ekleme
+        if not course:
+            course = Course(
+                course_name=course_name,
+                course_capacity=course_capacity,
+                course_code=course_code,
+                establishment_date=establishment_date,
+                instructor=instructor
+            )
+            course.save()  # Kursu kaydet
+        
+        return redirect('home')
+
+    return render(request, 'addcourse.html', {'course': course})
+
 
 def userlogout(request):
     logout(request)  
-    return redirect('index') 
+    return redirect('giris') 
 
 def password_reset_form(request):
     return render(request,'password_reset_form.html')
@@ -53,35 +87,6 @@ def password_reset_complete(request):
 
 
 
-def addcourse(request):
-    if request.method == 'POST':
-        name = request.POST.get('course_name')
-        capacity = request.POST.get('course_capacity')
-        code = request.POST.get('course_code')
-        date_str = request.POST.get('establishment_date')
-        instructor = request.POST.get('instructor')
-
-        try:
-            date = datetime.strptime(date_str, '%d.%m.%Y').date()
-        except ValueError:
-            messages.error(request, 'Tarih formatı yanlış! Lütfen GG.AA.YYYY şeklinde girin.')
-            courses = Course.objects.all()
-            return render(request, 'addcourse.html', {'courses': courses})
-
-        Course.objects.create(
-            course_name=name,
-            course_capacity=capacity,
-            course_code=code,
-            establishment_date=date,
-            instructor=instructor
-        )
-        return redirect('addcourse')  # Sayfayı yenile, yeni kurs eklensin
-
-    # Her GET ve POST işleminden sonra mevcut kursları göster
-    courses = Course.objects.all()
-    return render(request, 'addcourse.html', {'courses': courses})
-
-
 def deletecourse(request):
     courses = Course.objects.all()
 
@@ -89,9 +94,9 @@ def deletecourse(request):
         course_id = request.POST.get('course_id')
         course = get_object_or_404(Course, id=course_id)
         course.delete()
-        return redirect('empty')  
+        return redirect('home')  
 
-    return render(request, 'deletecourse.html', {'courses': courses})
+    return render(request, 'deletecourse.html', {'courses': courses}) 
 
 
 @login_required(login_url='userlogin')
@@ -105,10 +110,6 @@ def coursedetail(request, course_id):
 
 def student(request,):
     return render(request, 'student.html')
-
-
-def qr(request,):
-    return render(request, 'qr.html')
 
 
 def update(request, course_id):
@@ -141,3 +142,11 @@ def update(request, course_id):
         return redirect('coursedetail', course_id=course.id) 
 
     return render(request, 'update.html', {'course': course})
+
+
+#Tarandığında gidilecek hedef sayfanın view'ını tanımla:
+def hedef(request):
+    return render(request, 'hedef.html')
+
+def qr(request):
+    return render(request, 'qr.html')
