@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="tr">
+{% load static %}
+
+<head>
+    <link rel="stylesheet" href="{% static 'css/generateqrr.css' %}">
+    <meta charset="UTF-8">
+    <title>QR Kod Oluştur</title>
+</head>
+
+<body>
+    <div class="container">
+        <h2>QR Kod Oluşturucu</h2>
+        <form method="POST">
+            {% csrf_token %}
+            <input type="text" name="qr_data" placeholder="QR koduna yazılacak metni girin" required>
+            <br>
+            <button type="submit">Oluştur</button>
+        </form>
+
+        {% if qr_code %}
+        <h3>Oluşturulan QR Kod:</h3>
+        <img src="data:image/png;base64,{{ qr_code }}" alt="QR Kod">
+        {% endif %}
+    </div>
+
+</body>
+
+</html>

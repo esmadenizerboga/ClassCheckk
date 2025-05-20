@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+    {% load static %}
+<head>
+  <link rel="stylesheet" href="{% static 'css/qrform.css' %}" />
+  <title>Harran Üniversitesi Bilgisayar Mühendisliği</title>
+</head>
+<body>
+  <header>
+    <h1>Harran Üniversitesi Bilgisayar Mühendisliği</h1>
+  </header>
+  <main>
+    <h2>Agile Methods in Software Development Attendance Form</h2>
+    <form method="post">
+      {% csrf_token %}
+      {{ form.as_p }}
+      <input type="submit" value="Submit">
+    </form>
+  </main>
+</body>
+</html>
