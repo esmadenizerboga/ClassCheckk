@@ -1,0 +1,123 @@
+body {
+    background-color: #f6ecce; /* Süt rengi */
+    margin: 0;
+    padding: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    text-align: center;
+    color: #1a1a1a;
+}
+
+/* Navbar */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #c4bd7f;
+    padding: 12px 30px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+}
+
+.navbar-left,
+.navbar-right {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+}
+
+.navbar-left li,
+.navbar-right li {
+    padding: 0 16px;
+}
+
+.navbar a {
+    color: #070707;
+    text-decoration: none;
+    font-size: 18px;
+    font-weight: 600;
+    transition: background-color 0.3s ease;
+    padding: 6px 10px;
+    border-radius: 4px;
+}
+
+.navbar a:hover {
+    background-color: #ddd;
+    color: #000;
+}
+
+/* Başlıklar */
+.centered-title {
+    margin-top: 60px;
+    color: #13397b;
+    font-weight: 700;
+    font-size: 32px;
+}
+
+.alt-title {
+    color: #13397b;
+    margin-bottom: 30px;
+    font-weight: 600;
+}
+
+/* Yan yana içerik */
+.yan-yana,
+.yana-yana {
+    margin: 0 40px;
+    display: flex;
+    justify-content: space-between;
+    font-size: 18px;
+    padding: 15px 0;
+    flex-wrap: wrap;
+    max-width: 900px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.yan-yana span,
+.yana-yana span {
+    color: #444;
+    font-weight: 600;
+}
+
+.sentence1, .sentence2 {
+    color: #555;
+    font-weight: 400;
+}
+
+/* Buton konteyneri */
+.button-container {
+    display: flex;
+    justify-content: center; /* Ortala */
+    gap: 20px;
+    margin: 40px 0;
+}
+
+/* Butonlar */
+.button, .button-update {
+    padding: 14px 30px;
+    font-size: 16px;
+    font-weight: 600;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    color: #fff;
+}
+
+.button {
+    background-color: #007BFF;
+}
+
+.button:hover {
+    background-color: #0056b3;
+    transform: scale(1.05);
+}
+
+.button-update {
+    background-color: #9906ce;
+}
+
+.button-update:hover {
+    background-color: #6a0499;
+    transform: scale(1.05);
+}
