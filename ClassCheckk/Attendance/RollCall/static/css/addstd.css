@@ -1,0 +1,102 @@
+/* Genel sayfa düzeni */
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #fef9f0; /* Süt rengi */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-height: 100vh;
+}
+
+/* Başlıklar */
+h1, h2 {
+    color: #2d6a4f;
+    margin-top: 30px;
+    text-align: center;
+}
+
+/* Form kutusu */
+form {
+    background-color: #ffffff;
+    padding: 25px 35px;
+    margin: 20px 0;
+    border-radius: 14px;
+    box-shadow: 0 6px 30px rgba(0, 0, 0, 0.1);
+    max-width: 500px;
+    width: 90%;
+    box-sizing: border-box;
+}
+
+/* Giriş kutuları */
+input[type="text"],
+input[type="email"] {
+    width: 100%;
+    padding: 12px 14px;
+    margin-bottom: 18px;
+    border: 1px solid #cbd5e1;
+    border-radius: 8px;
+    font-size: 16px;
+    background-color: #fefefe;
+    transition: border-color 0.3s ease;
+}
+
+input:focus {
+    border-color: #2d6a4f;
+    outline: none;
+}
+
+/* Yeşil Butonlar */
+button {
+    background-color: #2d6a4f;
+    color: white;
+    padding: 12px 22px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 16px;
+    font-weight: bold;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+button:hover {
+    background-color: #1b4332;
+    transform: scale(1.03);
+}
+
+/* Tablo stilleri */
+table {
+    border-collapse: collapse;
+    margin: 30px 0;
+    width: 90%;
+    max-width: 850px;
+    background-color: #ffffff;
+    box-shadow: 0 6px 25px rgba(0, 0, 0, 0.08);
+    border-radius: 12px;
+    overflow: hidden;
+}
+
+table th, table td {
+    padding: 14px 18px;
+    text-align: left;
+    border-bottom: 1px solid #e0e0e0;
+    font-size: 15px;
+}
+
+table th {
+    background-color: #40916c;
+    color: white;
+}
+
+table tr:hover {
+    background-color: #f6fef7;
+}
+
+/* Hata mesajı */
+p[style*="color:red"] {
+    margin-top: 10px;
+    font-weight: bold;
+    font-size: 16px;
+    color: #d90429 !important;
+}

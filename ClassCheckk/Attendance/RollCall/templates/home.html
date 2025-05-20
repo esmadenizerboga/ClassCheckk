@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+{% load static %}
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="{% static 'css/home.css' %}" />
+  <title>HOME PAGE</title>
+</head>
+
+<body>
+
+  <!-- Navbar -->
+  <nav class="navbar">
+    <ul class="navbar-left">
+      <li><a href="{% url 'index' %}">CLASSCHECK</a></li>
+      <li><a href="{% url 'home' %}">HOME</a></li>
+    </ul>
+    <ul class="navbar-right">
+      <li><a href="{% url 'userlogout' %}">LOG OUT</a></li>
+    </ul>
+  </nav>
+
+  <!-- Başlık -->
+  <h1 class="welcome-title">WELCOME TO YOUR PAGE</h1>
+  <h2 class="alt-title">COURSES - 2025/2026 SPRING TERM</h2>
+
+  <!-- Butonlar -->
+  <form action="{% url 'addcourse' %}">
+    <button type="submit" class="button">ADD COURSE</button>
+  </form>
+  <hr>
+  <form action="{% url 'deletecourse' %}">
+    <button type="submit" class="two">DELETE COURSE</button>
+  </form>
+  <hr>
+
+  <!-- Kurslar Tablosu -->
+  <div class="container">
+    <h1>Course Management System</h1>
+    <table class="course-table">
+      <thead>
+        <tr>
+          <th>Course Name</th>
+          <th>Capacity</th>
+          <th>Course Code</th>
+          <th>Establishment Date</th>
+          <th>Instructor</th>
+        </tr>
+      </thead>
+      <tbody>
+        {% for course in courses %}
+        <tr>
+          <td>
+            <a href="{% url 'coursedetail' course.id %}" class="course-link">
+              {{ course.course_name }}
+            </a>
+          </td>
+          <td>{{ course.course_capacity }}</td>
+          <td>{{ course.course_code }}</td>
+          <td>{{ course.establishment_date }}</td>
+          <td>{{ course.instructor }}</td>
+        </tr>
+        {% endfor %}
+      </tbody>
+    </table>
+  </div>
+
+</body>
+</html>
