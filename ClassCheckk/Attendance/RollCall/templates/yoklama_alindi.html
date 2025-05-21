@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+    {% load static %}
+<head>
+    <title>Take Attendance</title>
+    <link rel="stylesheet" href="{% static 'css/yoklamaal.css' %}">
+</head>
+<body>
+    <h2>Attendance Form</h2>
+    <form method="POST">
+        {% csrf_token %}
+        <label>Name:</label><br>
+        <input type="text" name="ad" required><br><br>
+        
+        <label>Surname:</label><br>
+        <input type="text" name="soyad" required><br><br>
+        
+        <label>Number:</label><br>
+        <input type="text" name="numara" required><br><br>
+
+        <!-- İşte onay kutusu -->
+        <input type="checkbox" id="onaylandi" name="onaylandi" required>
+        <label for="onaylandi">"I confirm that I took the attendance myself."</label><br><br>
+        
+        <button type="submit"> SUBMIT </button>
+    </form>
+</body>
+</html>

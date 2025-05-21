@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+{% load static %}
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="{% static 'css/course.css' %}" />
+  <title>DETAIL PAGE</title>
+</head>
+
+<body>
+
+  <!-- Navbar -->
+
+  <nav class="navbar">
+    <ul class="navbar-left">
+      <li><a href="{% url 'index' %}">CLASSCHECK</a></li>
+      <li><a href="{% url 'home' %}">HOME</a></li>
+    </ul>
+    <ul class="navbar-right">
+      <li><a href="{% url 'userlogout' %}">LOG OUT</a></li>
+    </ul>
+  </nav>
+
+  <h1 class="centered-title">OPERATING SYSTEM COURSE TIMELINE</h1>
+  <h2 class="alt-title"> ABOUT THE COURSE</h2>
+
+  <div  class="yan-yana">
+  <span class="sentence" > Course Code:  </span>
+  <span class="sentence" > Wednesday 10:00-12:00 AM-F301 </span>
+  </div>
+
+<div  class="yana-yana">
+  <span class="sentence1" >Grading:  </span>
+  <span class="sentence2" > 1 Midterm Exam (%30) 1 Presentation (%20) 1 Final Exam (%40) Attendance (%10 Extra) </span>
+  </div>
+
+  <div class="button-container">
+    <!-- ADD STUDENT Butonu -->
+    <form action="{% url 'addstudent' %}">
+        <button type="submit" class="button">ADD STUDENT</button>
+    </form>
+
+    <!-- UPDATE Butonu -->
+    <form action="{% url 'update' course.id %}">
+        <button type="submit" class="button-update">UPDATE</button>
+    </form>
+</div>
+     <a href = "{% url 'qrgoster' %}">
+    <button type="submit" class="button"> SCAN QR</button>
+  </a> 
+      <a href = "{% url 'yoklamalist' %}" > 
+        <button type="submit" class="button">
+        Yoklama List </button>
+       </a>
+    
+</body>
+</html>
+

@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+{% load static %}
+
+<head>
+  <meta charset="UTF-8">
+  <title>CLASSCHECK</title>
+  <link rel="stylesheet" href="{% static 'css/style.css' %}">
+</head>
+
+<body>
+  <div class="giris">
+
+    <!-- Navbar -->
+    <nav class="navbar">
+      <ul class="navbar-left">
+        <li><a href="{% url 'index' %}">CLASSCHECK</a></li>
+      </ul>
+      <ul class="navbar-right">
+        <li><a href="{% url 'userlogin' %}">LOG IN</a></li>
+        <li><a href="{% url 'home' %}"> HOME </a></li>
+
+      </ul>
+    </nav>
+
+    <!-- Başlık ve Görseli Burada Tanımladık -->
+    <h1 class="custom-title">Welcome to Harran University ClassCheck</h1>
+    <img src="{% static 'harran.jpg' %}" alt="Harran Üniversitesi" class="resim-orta">
+
+    <!-- Tanıtım Metni -->
+    <h1 class="additional-text"><strong>Welcome to Harran University ClassCheck!</strong></h1>
+    <p class="description-text">
+      This platform is specifically for tracking attendance. Students can view their attendance status and access course
+      records.
+      Instructors can effectively monitor student participation. We encourage you to use this tool effectively
+      throughout your academic journey.
+    </p>
+
+    <!-- Admin Giriş Butonu -->
+    <form action="{% url 'userlogin' %}">
+      <button type="submit" class="button">ADMIN</button>
+    </form>
+  </div>
+</body>
+
+</html>
