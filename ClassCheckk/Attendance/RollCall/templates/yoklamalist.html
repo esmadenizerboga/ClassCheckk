@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="tr">
+    {%load static%}
+<head>
+    <meta charset="UTF-8" />
+    <title>Attendance List</title>
+    <link rel="stylesheet" href="{% static 'css/list.css' %}" />
+</head>
+<body>
+    <h2 style="text-align:center; color:#004d99;">Students Added via QR</h2>
+    <table>
+        <thead>
+            <tr>
+                <th>Name</th>
+                <th>Surname</th>
+                <th>No</th>
+                <th>Approval Status</th>
+                <th>Delete</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for yoklama in yoklamalar %}
+                <tr>
+                    <td>{{ yoklama.ad }}</td>
+                    <td>{{ yoklama.soyad }}</td>
+                    <td>{{ yoklama.numara }}</td>
+                    <td>
+                        {% if yoklama.onaylandi %}
+                            <span style="color:green; font-weight:bold;">Approved</span>
+                        {% else %}
+                            <span style="color:red; font-weight:bold;">Not Approved</span>
+                        {% endif %}
+                    </td>
+                     <td>
+                <form method="POST" action="{% url 'yoklama_sil' yoklama.id %}" style="display:inline;">
+                    {% csrf_token %}
+                    <button type="submit" style="background:none; border:none; color:red; cursor:pointer;" title="Sil">&#10060;</button>
+                </form>
+            </td>
+                </tr>
+            {% empty %}
+                <tr>
+                    <td colspan="4">Attendance has not been taken yet.</td>
+                </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+</body>
+</html>

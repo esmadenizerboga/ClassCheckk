@@ -1,0 +1,99 @@
+/* yoklamaal.css */
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f6ecce;
+    padding: 40px;
+    color: #333;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+
+    /* Sayfa yüksekliği kadar yayılır */
+}
+
+h2 {
+    color: #004d99;
+    font-family: 'Times New Roman', Times, serif;
+    margin-bottom: 30px;
+    text-align: center;
+    font-size: 2.2em;
+    /* başlık büyüklüğü */
+}
+
+form {
+    background-color: white;
+    max-width: 600px;
+    /* genişlik arttı */
+    margin: 30px auto;
+    padding: 90px 90px;
+    /* padding arttı */
+    border-radius: 10px;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.15);
+    margin-top: -5px;
+}
+
+label {
+    font-weight: bold;
+    display: block;
+    margin-bottom: 10px;
+    /* biraz daha boşluk */
+    color: #555;
+    font-size: 1.1em;
+    /* etiketler büyütüldü */
+}
+
+input[type="text"],
+input[type="email"] {
+    width: 100%;
+    padding: 12px 15px;
+    /* padding arttı */
+    margin-bottom: 22px;
+    /* alt boşluk arttı */
+    border: 1.5px solid #ccc;
+    border-radius: 6px;
+    font-size: 17px;
+    /* font büyüklüğü arttı */
+    box-sizing: border-box;
+    transition: border-color 0.3s ease;
+}
+
+input[type="text"]:focus,
+input[type="email"]:focus {
+    border-color: #004d99;
+    outline: none;
+}
+
+input[type="checkbox"] {
+    transform: scale(1.4);
+    /* biraz daha büyük */
+    margin-right: 12px;
+    vertical-align: middle;
+    cursor: pointer;
+}
+
+label[for="onaylandi"] {
+    font-weight: normal;
+    display: inline;
+    color: #333;
+    cursor: pointer;
+    font-size: 1em;
+}
+
+button {
+    background-color: #004d99;
+    color: white;
+    font-size: 18px;
+    /* buton yazısı büyütüldü */
+    padding: 16px;
+    width: 100%;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: #bed7ef;
+}
