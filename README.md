@@ -1,4 +1,4 @@
-<img width="1914" height="914" alt="dort" src="https://github.com/user-attachments/assets/695406c7-b2fb-40f4-a102-1c534a0ad43e" /><img width="1908" height="863" alt="bes" src="https://github.com/user-attachments/assets/1fb91a0e-1f4c-4742-9864-e66d1b9801f2" /># 📋 ClassCheckk
+📋 ClassCheckk
 
 > **Django Based Multi-User Course Attendance Tracking System**
 
@@ -85,17 +85,17 @@ ClassCheckk/
 ---
 
 ## 📸 Ekran Görüntüleri
-<img width="1884" height="915" alt="bir" src="https://github.com/user-attachments/assets/75a97369-043f-44fd-8106-0f4588a410a6" />
-<img width="1911" height="904" alt="iki" src="https://github.com/user-attachments/assets/7a29db3d-e0d0-4726-a024-677e3f33293d" />
-<img width="1738" height="435" alt="on bir" src="https://github.com/user-attachments/assets/636f45c2-6e64-4ba5-ba9c-4d2242aedf8b" />
-<img width="547" height="649" alt="on" src="https://github.com/user-attachments/assets/fe16f77a-c81e-4b5f-84bd-b5370ef60b35" />
-<img width="944" height="839" alt="dokuz" src="https://github.com/user-attachments/assets/5fa35da4-164f-46b0-abd5-383b12c7cc17" />
-<img width="1726" height="829" alt="sekiz" src="https://github.com/user-attachments/assets/7e608a46-9782-4ccd-926d-773076f0bbc0" />
-<img width="1872" height="905" alt="yedi" src="https://github.com/user-attachments/assets/d166608d-c5d6-46c7-8c68-797e2e3b43eb" />
-<img width="1871" height="903" alt="alti" src="https://github.com/user-attachments/assets/6b4d34d2-11bc-4ecb-8cb2-1899d7960cf7" />
-<img width="1908" height="863" alt="bes" src="https://github.com/user-attachments/assets/767623b1-bd89-4253-883b-37bb7b1d3c1d" />
-<img width="1914" height="914" alt="dort" src="https://github.com/user-attachments/assets/faf55cc4-3463-46f2-a5a9-880da858904a" />
-<img width="1899" height="848" alt="uc" src="https://github.com/user-attachments/assets/68e25efb-cd3b-4757-b53a-9c3ad25ca6bf" />
+1-TANITIM: <img width="1884" height="915" alt="bir" src="https://github.com/user-attachments/assets/75a97369-043f-44fd-8106-0f4588a410a6" />
+2-GİRİŞ:<img width="1911" height="904" alt="iki" src="https://github.com/user-attachments/assets/7a29db3d-e0d0-4726-a024-677e3f33293d" />
+11-ATTENDANCE LİST <img width="1738" height="435" alt="on bir" src="https://github.com/user-attachments/assets/636f45c2-6e64-4ba5-ba9c-4d2242aedf8b" />
+10-ATTENDANCE RECORDED <img width="547" height="649" alt="on" src="https://github.com/user-attachments/assets/fe16f77a-c81e-4b5f-84bd-b5370ef60b35" />
+9-ATTENDANCE FORM <img width="944" height="839" alt="dokuz" src="https://github.com/user-attachments/assets/5fa35da4-164f-46b0-abd5-383b12c7cc17" />
+8-QR <img width="1726" height="829" alt="sekiz" src="https://github.com/user-attachments/assets/7e608a46-9782-4ccd-926d-773076f0bbc0" />
+7-UPDATE COURSE <img width="1872" height="905" alt="yedi" src="https://github.com/user-attachments/assets/d166608d-c5d6-46c7-8c68-797e2e3b43eb" />
+6-ADD STUDENT<img width="1871" height="903" alt="alti" src="https://github.com/user-attachments/assets/6b4d34d2-11bc-4ecb-8cb2-1899d7960cf7" />
+5-DETAİL COURSE:<img width="1851" height="866" alt="bes" src="https://github.com/user-attachments/assets/f64a8ce2-a135-4488-8448-c7777de4ce71" />
+4-ADD COURSE: <img width="1914" height="914" alt="dort" src="https://github.com/user-attachments/assets/faf55cc4-3463-46f2-a5a9-880da858904a" />
+3-HOME:<img width="1899" height="848" alt="uc" src="https://github.com/user-attachments/assets/68e25efb-cd3b-4757-b53a-9c3ad25ca6bf" />
 
 
 
