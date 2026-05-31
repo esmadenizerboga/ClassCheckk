@@ -113,7 +113,9 @@ ClassCheckk/
 <img width="944" height="839" alt="dokuz" src="https://github.com/user-attachments/assets/5fa35da4-164f-46b0-abd5-383b12c7cc17" />
 
 10-ATTENDANCE RECORDED:
+
 <img width="547" height="649" alt="on" src="https://github.com/user-attachments/assets/fe16f77a-c81e-4b5f-84bd-b5370ef60b35" />
+
 
 11-ATTENDANCE LİST:
 <img width="1738" height="435" alt="on bir" src="https://github.com/user-attachments/assets/636f45c2-6e64-4ba5-ba9c-4d2242aedf8b" />
